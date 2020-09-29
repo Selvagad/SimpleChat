@@ -6,12 +6,12 @@ import chatProject.algo.UserAlgo;
 import chatProject.model.messages.ChatInstance;
 import chatProject.model.messages.Chatroom;
 import chatProject.model.messages.Message;
-import chatProject.model.user.UserInfo;
 import chatProject.model.user.Status;
 import chatProject.model.user.UserAccount;
+import chatProject.model.user.UserInfo;
 import com.google.gson.Gson;
 
-import java.io.*;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.time.LocalDateTime;
@@ -318,6 +318,7 @@ public class ChatServer<T> implements UserAlgo, ChatroomAlgo<T>, MessageAlgo<T>,
         Message<T> newMessage = getChatroom(chatroomId).addMessage(user, content);
 
         // return new created message
+        return newMessage;
     }
 
     /**

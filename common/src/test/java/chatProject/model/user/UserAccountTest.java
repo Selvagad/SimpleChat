@@ -13,14 +13,14 @@ public class UserAccountTest {
         final UserAccount user = new UserAccount(0, username);
 
         assertEquals("The username should be the one set in the constructor",
-                username, user.getId());
+                username, user.getUsername());
     }
 
     @Test
     public void testEquals() {
 
         final UserAccount user1 = new UserAccount(1, "MyUser");
-        final UserAccount user2 = new UserAccount(2, "MyUser");
+        final UserAccount user2 = new UserAccount(1, "MyUser");
 
         assertEquals("2 accounts are equal if they have the same username",
                 user1, user2);
@@ -30,7 +30,7 @@ public class UserAccountTest {
     public void testHashCode() {
 
         final UserAccount user1 = new UserAccount(1, "MyUser");
-        final UserAccount user2 = new UserAccount(2, "MyUser");
+        final UserAccount user2 = new UserAccount(1, "MyUser");
 
         assertEquals("2 accounts with the same username should have the same hashcode",
                 user1.hashCode(), user2.hashCode());

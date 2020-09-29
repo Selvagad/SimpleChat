@@ -9,5 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="test1" />
     <orderEntry type="module" module-name="main" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.6" level="project" />
+    <orderEntry type="library" name="Gradle: com.sparkjava:spark-core:2.9.2" level="project" />
   </component>
 </module>

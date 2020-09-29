@@ -2,6 +2,9 @@ package specifications
 
 import chatProject.model.messages.ChatInstance
 import chatProject.model.messages.Chatroom
+import chatProject.model.user.Status
+import chatProject.model.user.UserAccount
+import chatProject.model.user.UserInfo
 import chatProject.server.ChatServer
 import chatProject.server.ClientNotifierInterface
 import spock.lang.Specification

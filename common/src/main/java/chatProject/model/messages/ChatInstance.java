@@ -27,7 +27,12 @@ public class ChatInstance<T> {
     private final Map<UserInfo, LocalTime> users;
 
     public ChatInstance(List<Chatroom<T>> chatrooms, Map<UserInfo, LocalTime> users) {
-        this.chatrooms = chatrooms;
+        if(chatrooms == null){
+            this.chatrooms = new ArrayList<>();
+        }
+        else{
+            this.chatrooms = chatrooms;
+        }
         this.users = users;
     }
 

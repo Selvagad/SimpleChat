@@ -42,6 +42,10 @@ subprojects {
 	testImplementation group: 'junit', name: 'junit', version: '4.12'
 	}
 
-
+	test {
+		afterTest { desc, result ->
+			logger.quiet "The test ${desc.name} of the class ${desc.className} was a : ${result.resultType}"
+		}
+	}
 }
 
